@@ -37,7 +37,9 @@
         body.light-mode .testi-card,
         body.light-mode .step,
         body.light-mode .payment-section,
-        body.light-mode .location-section {
+        body.light-mode .location-section,
+        body.light-mode .blog-section,
+        body.light-mode .slider-section {
             background: rgba(255, 248, 240, 0.9);
             backdrop-filter: blur(8px);
             color: #2c2418;
@@ -45,7 +47,8 @@
 
         body.light-mode .product-title,
         body.light-mode .step,
-        body.light-mode .address-list h3 {
+        body.light-mode .address-list h3,
+        body.light-mode .blog-card h3 {
             color: #5a3f28;
         }
 
@@ -64,7 +67,9 @@
         body.light-mode .free-gift,
         body.light-mode .trust-item,
         body.light-mode .address-item,
-        body.light-mode .main-address p {
+        body.light-mode .main-address p,
+        body.light-mode .blog-card p,
+        body.light-mode .blog-meta {
             color: #5a3f28;
         }
 
@@ -97,6 +102,22 @@
         body.light-mode .scroll-top {
             background: rgba(184,144,42,0.3);
             color: #5a3f28;
+        }
+
+        body.light-mode .slider-container {
+            background: rgba(255,248,240,0.8);
+        }
+
+        body.light-mode .slider-text h3 {
+            color: #5a3f28;
+        }
+
+        body.light-mode .dot {
+            background: #cbc3b5;
+        }
+
+        body.light-mode .dot.active {
+            background: var(--gold-dark);
         }
 
         /* Dark Mode (default) */
@@ -227,6 +248,7 @@
             gap: 40px;
             font-weight: 600;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
@@ -366,6 +388,146 @@
             display: inline-block;
             padding: 8px 24px;
             border-radius: 40px;
+        }
+
+        /* ========= SLIDER / BANNER PROMO ========= */
+        .slider-section {
+            background: linear-gradient(135deg, rgba(25,25,45,0.9), rgba(15,15,30,0.95));
+            backdrop-filter: blur(8px);
+            border-radius: 60px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid var(--glass-border);
+        }
+
+        .slider-title {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            color: var(--gold);
+        }
+
+        .slider-container {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+            border-radius: 40px;
+        }
+
+        .slider-wrapper {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            position: relative;
+        }
+
+        .slide-content {
+            background: linear-gradient(135deg, rgba(212,175,55,0.15), rgba(212,175,55,0.05));
+            border-radius: 40px;
+            padding: 50px 40px;
+            text-align: center;
+            border: 1px solid rgba(212,175,55,0.3);
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slide-emoji {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .slide-content h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 15px;
+        }
+
+        .slide-content p {
+            font-size: 16px;
+            color: #cbc3b5;
+            margin-bottom: 20px;
+            max-width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .slide-btn {
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            color: #1a1a2e;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .slide-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(5px);
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.3s;
+            z-index: 10;
+        }
+
+        .slider-btn:hover {
+            background: var(--gold);
+            color: #1a1a2e;
+        }
+
+        .slider-btn.prev {
+            left: 15px;
+        }
+
+        .slider-btn.next {
+            right: 15px;
+        }
+
+        .dots {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(212,175,55,0.4);
+            margin: 0 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .dot.active {
+            background: var(--gold);
+            width: 30px;
+            border-radius: 10px;
         }
 
         /* Stats */
@@ -514,7 +676,154 @@
             color: var(--gold-light);
         }
 
-        /* ========= COMING SOON SECTION ========= */
+        /* ========= BLOG / ARTIKEL SECTION ========= */
+        .blog-section {
+            background: linear-gradient(135deg, rgba(25,25,45,0.9), rgba(15,15,30,0.95));
+            backdrop-filter: blur(8px);
+            border-radius: 60px;
+            padding: 50px 45px;
+            margin: 60px 0;
+            border: 1px solid var(--glass-border);
+        }
+
+        .blog-title {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            background: linear-gradient(135deg, var(--gold-light), var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .blog-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            justify-content: center;
+        }
+
+        .blog-card {
+            background: rgba(0,0,0,0.4);
+            border-radius: 40px;
+            padding: 28px;
+            width: 320px;
+            transition: all 0.3s;
+            border: 1px solid rgba(212,175,55,0.3);
+            cursor: pointer;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--gold);
+        }
+
+        .blog-emoji {
+            font-size: 50px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .blog-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 12px;
+        }
+
+        .blog-card p {
+            font-size: 14px;
+            color: #cbc3b5;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #a0a0a0;
+            margin-top: 10px;
+        }
+
+        .read-more {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 13px;
+            transition: 0.2s;
+        }
+
+        .read-more:hover {
+            letter-spacing: 1px;
+        }
+
+        /* Modal untuk baca artikel */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            backdrop-filter: blur(8px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e, #0f0f1a);
+            border-radius: 40px;
+            max-width: 600px;
+            width: 90%;
+            padding: 40px;
+            border: 1px solid var(--gold);
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        body.light-mode .modal-content {
+            background: linear-gradient(135deg, #fff5ea, #fef9f0);
+            color: #2c2418;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: var(--gold);
+        }
+
+        .modal-close:hover {
+            color: white;
+        }
+
+        .modal-content h2 {
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .modal-content p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Coming Soon Section */
         .coming-soon-section {
             background: linear-gradient(135deg, rgba(25,25,45,0.9), rgba(15,15,30,0.95));
             backdrop-filter: blur(8px);
@@ -617,7 +926,7 @@
             color: #1a1a2e;
         }
 
-        /* ========= JAM OPERASIONAL SECTION ========= */
+        /* Hours Section */
         .hours-section {
             background: linear-gradient(135deg, rgba(25,25,45,0.9), rgba(15,15,30,0.95));
             backdrop-filter: blur(8px);
@@ -1143,6 +1452,13 @@
             .hours-section { padding: 30px 20px; }
             .coming-title { font-size: 28px; }
             .hours-title { font-size: 24px; }
+            .blog-section { padding: 30px 20px; }
+            .blog-title { font-size: 28px; }
+            .slider-section { padding: 30px 20px; }
+            .slide-content { padding: 30px 20px; }
+            .slide-content h3 { font-size: 24px; }
+            .slide-content p { font-size: 14px; max-width: 100%; }
+            .slider-btn { width: 35px; height: 35px; font-size: 16px; }
         }
     </style>
 </head>
@@ -1217,6 +1533,44 @@
             <div class="trust-item">🎁 Gift wrapping cantik</div>
         </div>
 
+        <!-- ========= SLIDER / BANNER PROMO ========= -->
+        <div class="slider-section">
+            <div class="slider-title">
+                <span>🎉</span> Special Promo <span>🔥</span>
+            </div>
+            <div class="slider-container">
+                <div class="slider-wrapper" id="sliderWrapper">
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-emoji">🐟✨</div>
+                            <h3>Buy 1 Get 1 Free!</h3>
+                            <p>Beli produk Salmon Feast dapat 1 gratis Tuna Delight. Promo terbatas!</p>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Whiskers%26Co.%2C%20saya%20tertarik%20dengan%20promo%20Buy%201%20Get%201%20Free" target="_blank" class="slide-btn">Claim Promo →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-emoji">💊🌿</div>
+                            <h3>Diskon 20% Vitamin!</h3>
+                            <p>Semua produk vitamin & herbal diskon 20% untuk member baru.</p>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Whiskers%26Co.%2C%20saya%20tertarik%20dengan%20diskon%20vitamin%2020%25" target="_blank" class="slide-btn">Claim Promo →</a>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="slide-content">
+                            <div class="slide-emoji">🎁🐱</div>
+                            <h3>Free Catnip Set!</h3>
+                            <p>Minimal belanja Rp 200k dapat free Organic Catnip + Feather Wand.</p>
+                            <a href="https://wa.me/6281234567890?text=Halo%20Whiskers%26Co.%2C%20saya%20tertarik%20dengan%20promo%20Free%20Catnip%20Set" target="_blank" class="slide-btn">Claim Promo →</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn">❮</button>
+                <button class="slider-btn next" id="nextBtn">❯</button>
+                <div class="dots" id="dots"></div>
+            </div>
+        </div>
+
         <!-- Stats -->
         <div class="stats">
             <div class="stat-item"><div class="stat-number">🐈 2.000+</div><div>Happy Cats</div></div>
@@ -1241,7 +1595,51 @@
         <div class="section-title" id="products-section">🐟 Best Seller Collection 🍗</div>
         <div class="products" id="productsContainer"></div>
 
-        <!-- ========= COMING SOON SECTION ========= -->
+        <!-- ========= BLOG / ARTIKEL SECTION ========= -->
+        <div class="blog-section">
+            <div class="blog-title">
+                <span>📝</span> Cat Care Articles <span>🐾</span>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card" onclick="openModal(1)">
+                    <span class="blog-emoji">🍽️</span>
+                    <h3>5 Makanan Terbaik untuk Bulu Kucing Kinclong</h3>
+                    <p>Nutrisi penting yang membuat bulu kucing Anda sehat dan berkilau alami...</p>
+                    <div class="blog-meta">
+                        <span>📅 15 Mar 2026</span>
+                        <span class="read-more">Baca selengkapnya →</span>
+                    </div>
+                </div>
+                <div class="blog-card" onclick="openModal(2)">
+                    <span class="blog-emoji">💊</span>
+                    <h3>Vitamin Penting untuk Kucing di Setiap Usia</h3>
+                    <p>Panduan lengkap suplemen yang dibutuhkan kitten hingga senior cat...</p>
+                    <div class="blog-meta">
+                        <span>📅 10 Mar 2026</span>
+                        <span class="read-more">Baca selengkapnya →</span>
+                    </div>
+                </div>
+                <div class="blog-card" onclick="openModal(3)">
+                    <span class="blog-emoji">😿</span>
+                    <h3>Tanda Kucing Stres & Cara Mengatasinya</h3>
+                    <p>Kenali perilaku kucing stres dan solusi efektif untuk membuatnya nyaman...</p>
+                    <div class="blog-meta">
+                        <span>📅 5 Mar 2026</span>
+                        <span class="read-more">Baca selengkapnya →</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal untuk Artikel -->
+        <div id="articleModal" class="modal">
+            <div class="modal-content">
+                <span class="modal-close" onclick="closeModal()">&times;</span>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+
+        <!-- Coming Soon Section -->
         <div class="coming-soon-section">
             <div class="coming-title">
                 <span>🌟</span> Coming Soon <span>🚀</span>
@@ -1274,7 +1672,7 @@
             </div>
         </div>
 
-        <!-- ========= JAM OPERASIONAL SECTION ========= -->
+        <!-- Hours Section -->
         <div class="hours-section">
             <div class="hours-title">
                 <span>🕐</span> Jam Operasional <span>⏰</span>
@@ -1431,6 +1829,106 @@
     </div>
 
     <script>
+        // ========= SLIDER FUNCTION =========
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const sliderWrapper = document.getElementById('sliderWrapper');
+        const dotsContainer = document.getElementById('dots');
+
+        function updateSlider() {
+            sliderWrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                if (i === currentSlide) dot.classList.add('active');
+                dot.addEventListener('click', () => {
+                    currentSlide = i;
+                    updateSlider();
+                });
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlider();
+        }
+
+        document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        document.getElementById('prevBtn').addEventListener('click', prevSlide);
+        createDots();
+
+        // Auto slide every 5 seconds
+        setInterval(nextSlide, 5000);
+
+        // ========= MODAL ARTIKEL =========
+        const articles = {
+            1: {
+                title: "5 Makanan Terbaik untuk Bulu Kucing Kinclong",
+                content: `<p>Bulu kucing yang sehat dan berkilau adalah impian setiap cat parent. Berikut 5 rekomendasi makanan yang bisa membuat bulu anabul makin kinclong:</p>
+                <br><p><strong>1. Salmon</strong> - Kaya akan omega 3 yang membuat bulu lembut dan berkilau.</p>
+                <p><strong>2. Tuna</strong> - Sumber protein tinggi dengan rasa yang disukai kucing.</p>
+                <p><strong>3. Telur</strong> - Mengandung biotin yang baik untuk kesehatan kulit dan bulu.</p>
+                <p><strong>4. Hati Ayam</strong> - Kaya vitamin A untuk menjaga kelembaban kulit.</p>
+                <p><strong>5. Minyak Ikan</strong> - Suplemen omega 3 yang bisa ditambahkan ke makanan.</p>
+                <br><p>✨ Tips dari Whiskers & Co.: Kombinasikan makanan basah dan kering untuk hasil maksimal!</p>`
+            },
+            2: {
+                title: "Vitamin Penting untuk Kucing di Setiap Usia",
+                content: `<p>Kucing membutuhkan nutrisi berbeda di setiap tahap kehidupannya. Berikut panduan vitamin penting:</p>
+                <br><p><strong>🐱 Kitten (0-12 bulan):</strong> Butuh kalsium, DHA, dan protein tinggi untuk pertumbuhan.</p>
+                <p><strong>🐈 Dewasa (1-7 tahun):</strong> Vitamin B kompleks, taurin, dan antioksidan.</p>
+                <p><strong>😿 Senior (7+ tahun):</strong> Glukosamin untuk sendi, dan vitamin E untuk imunitas.</p>
+                <br><p>💡 Whiskers & Co. menyediakan vitamin lengkap untuk semua usia kucing kesayangan Anda!</p>`
+            },
+            3: {
+                title: "Tanda Kucing Stres & Cara Mengatasinya",
+                content: `<p>Kucing bisa mengalami stres karena berbagai faktor. Kenali tanda-tandanya:</p>
+                <br><p><strong>⚠️ Tanda Kucing Stres:</strong> Sembunyi berlebihan, grooming berlebihan, nafsu makan menurun, agresif, atau buang air sembarangan.</p>
+                <br><p><strong>✅ Cara Mengatasi:</strong></p>
+                <p>1. Sediakan tempat bersembunyi yang nyaman</p>
+                <p>2. Gunakan pheromone diffuser</p>
+                <p>3. Mainan interaktif untuk mengurangi kebosanan</p>
+                <p>4. Rutinitas makan dan bermain yang konsisten</p>
+                <p>5. Konsultasi ke dokter hewan jika diperlukan</p>
+                <br><p>🏠 Whiskers & Co. menyediakan mainan anti-stress dan aksesoris yang bisa membantu anabul merasa nyaman!</p>`
+            }
+        };
+
+        function openModal(id) {
+            const modal = document.getElementById('articleModal');
+            const modalBody = document.getElementById('modalBody');
+            const article = articles[id];
+            modalBody.innerHTML = `<h2>${article.title}</h2>${article.content}`;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('articleModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside content
+        document.getElementById('articleModal').addEventListener('click', (e) => {
+            if (e.target === document.getElementById('articleModal')) {
+                closeModal();
+            }
+        });
+
         // ========= DARK/LIGHT MODE TOGGLE =========
         function initTheme() {
             const savedTheme = localStorage.getItem('theme');
