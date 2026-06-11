@@ -11,13 +11,13 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
+        /* ========= (CSS sama persis seperti sebelumnya, tidak berubah) ========= */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* ========= VARIABLES ========= */
         :root {
             --gold: #C6A43B;
             --gold-light: #E8D5A3;
@@ -35,7 +35,6 @@
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        /* Light Mode */
         body.light-mode {
             background: linear-gradient(135deg, #FFF9F0 0%, #FFF5EA 100%);
             color: #2D2D2D;
@@ -116,7 +115,6 @@
             color: #2D2D2D;
         }
 
-        /* Dark Mode (default) */
         body {
             font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
             background: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 100%);
@@ -128,7 +126,6 @@
             transition: background 0.4s ease, color 0.3s ease;
         }
 
-        /* Animated Background */
         .cat-bg-animation {
             position: fixed;
             top: 0;
@@ -209,7 +206,6 @@
             z-index: 2;
         }
 
-        /* Glassmorphism Navbar */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -296,7 +292,6 @@
             color: #1A1A2E;
         }
 
-        /* Hero Section */
         .hero {
             display: flex;
             flex-direction: column;
@@ -398,7 +393,6 @@
             border-radius: 40px;
         }
 
-        /* Stats Section */
         .stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -435,7 +429,7 @@
             opacity: 0.8;
         }
 
-        /* Category Buttons */
+        /* Category Buttons - DALAM BAHASA INDONESIA */
         .category-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -470,7 +464,6 @@
             transform: translateY(-2px);
         }
 
-        /* Products Grid */
         .products {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -559,7 +552,6 @@
             color: #1A1A2E;
         }
 
-        /* Trust Badges */
         .trust-badge {
             display: flex;
             justify-content: center;
@@ -577,7 +569,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Slider Section */
         .slider-section {
             background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(15,15,26,0.95));
             backdrop-filter: blur(12px);
@@ -707,7 +698,6 @@
             border-radius: 10px;
         }
 
-        /* Blog Section */
         .blog-section {
             background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(15,15,26,0.95));
             backdrop-filter: blur(12px);
@@ -790,7 +780,6 @@
             letter-spacing: 1px;
         }
 
-        /* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -841,7 +830,6 @@
             transform: scale(1.1);
         }
 
-        /* Coming Soon */
         .coming-soon-section {
             background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(15,15,26,0.95));
             backdrop-filter: blur(12px);
@@ -930,7 +918,6 @@
             color: #1A1A2E;
         }
 
-        /* Hours Section */
         .hours-section {
             background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(15,15,26,0.95));
             backdrop-filter: blur(12px);
@@ -975,7 +962,6 @@
             color: var(--gold);
         }
 
-        /* Payment Section */
         .payment-section {
             background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(15,15,26,0.95));
             backdrop-filter: blur(12px);
@@ -1055,7 +1041,6 @@
             color: #1A1A2E;
         }
 
-        /* Location Section */
         .location-section {
             background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(15,15,26,0.95));
             backdrop-filter: blur(12px);
@@ -1151,7 +1136,6 @@
             transform: translateX(8px);
         }
 
-        /* Testimonials */
         .testimonials {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1173,7 +1157,6 @@
             border-color: var(--gold);
         }
 
-        /* Steps */
         .steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1210,7 +1193,6 @@
             margin-bottom: 20px;
         }
 
-        /* Promo Banner */
         .promo-banner {
             text-align: center;
             background: linear-gradient(135deg, rgba(198,164,59,0.12), rgba(198,164,59,0.05));
@@ -1221,7 +1203,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Footer */
         .footer {
             background: linear-gradient(135deg, #0A0A14, #12121C);
             color: #D4CFC5;
@@ -1277,7 +1258,6 @@
             box-shadow: var(--shadow-md);
         }
 
-        /* Floating Buttons */
         .floating-buttons {
             position: fixed;
             right: 25px;
@@ -1324,7 +1304,6 @@
             to { opacity: 1; transform: translateX(0); }
         }
 
-        /* Section Title */
         .section-title {
             font-size: clamp(32px, 6vw, 44px);
             font-weight: 700;
@@ -1336,7 +1315,6 @@
             color: transparent;
         }
 
-        /* Scroll Top */
         .scroll-top {
             position: fixed;
             bottom: 30px;
@@ -1361,7 +1339,6 @@
             transform: translateY(-3px);
         }
 
-        /* Toast */
         .toast-notification {
             position: fixed;
             bottom: 120px;
@@ -1531,16 +1508,16 @@
             </div>
         </div>
 
-        <!-- Category Buttons -->
+        <!-- ========= CATEGORY BUTTONS - DALAM BAHASA INDONESIA ========= -->
         <div class="category-buttons" id="menuButtons" data-aos="fade-up">
-            <button class="cat-btn active" data-cat="semua">✨ All Products</button>
-            <button class="cat-btn" data-cat="makanan">🍗 Food</button>
-            <button class="cat-btn" data-cat="vitamin">💊 Vitamins</button>
-            <button class="cat-btn" data-cat="aksesoris">🎀 Accessories</button>
-            <button class="cat-btn" data-cat="mainan">🧶 Toys</button>
-            <button class="cat-btn" data-cat="kesehatan">🏥 Health</button>
-            <button class="cat-btn" data-cat="travel">✈️ Travel</button>
-            <button class="cat-btn" data-cat="pasir">📦 Litter</button>
+            <button class="cat-btn active" data-cat="semua">✨ Semua Produk</button>
+            <button class="cat-btn" data-cat="makanan">🍗 Makanan</button>
+            <button class="cat-btn" data-cat="vitamin">💊 Vitamin</button>
+            <button class="cat-btn" data-cat="aksesoris">🎀 Aksesoris</button>
+            <button class="cat-btn" data-cat="mainan">🧶 Mainan</button>
+            <button class="cat-btn" data-cat="kesehatan">🏥 Kesehatan</button>
+            <button class="cat-btn" data-cat="travel">✈️ Perjalanan</button>
+            <button class="cat-btn" data-cat="pasir">📦 Pasir</button>
         </div>
 
         <div class="section-title" id="products-section">🐟 Best Seller Collection 🍗</div>
@@ -1796,7 +1773,6 @@
             offset: 100
         });
 
-        // Slider Function
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
         const totalSlides = slides.length;
@@ -1838,7 +1814,6 @@
         createDots();
         setInterval(nextSlide, 5000);
 
-        // Modal Articles
         const articles = {
             1: {
                 title: "5 Makanan Terbaik untuk Bulu Kucing Kinclong",
@@ -1891,7 +1866,6 @@
             if (e.target === document.getElementById('articleModal')) closeModal();
         });
 
-        // Dark/Light Mode
         function initTheme() {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme === 'light') {
@@ -1925,7 +1899,6 @@
         document.getElementById('themeToggle').addEventListener('click', toggleTheme);
         initTheme();
 
-        // Notify Me
         function notifyMe(productName) {
             if (Notification.permission === 'granted') {
                 new Notification('Whiskers & Co.', {
@@ -1966,7 +1939,6 @@
             });
         }
 
-        // Products Data
         const productsData = [
             { id: 1, nama: "Salmon Premium Feast", harga: "Rp 135k", img: "🐟🍣", kategori: "makanan" },
             { id: 2, nama: "Tuna Delight", harga: "Rp 125k", img: "🐟✨", kategori: "makanan" },
@@ -1989,7 +1961,7 @@
             const container = document.getElementById("productsContainer");
             let filtered = filterCat === "semua" ? productsData : productsData.filter(p => p.kategori === filterCat);
             if (filtered.length === 0) {
-                container.innerHTML = `<div style="text-align:center; width:100%; padding:clamp(50px, 10vw, 80px); background:rgba(26,26,46,0.5); border-radius:clamp(50px, 8vw, 80px);">😿 No products in this category yet.</div>`;
+                container.innerHTML = `<div style="text-align:center; width:100%; padding:clamp(50px, 10vw, 80px); background:rgba(26,26,46,0.5); border-radius:clamp(50px, 8vw, 80px);">😿 Belum ada produk di kategori ini.</div>`;
                 return;
             }
             let html = "";
@@ -2000,14 +1972,13 @@
                         <div class="product-img">${prod.img}</div>
                         <div class="product-title">${prod.nama}</div>
                         <div class="price">${prod.harga}</div>
-                        <a href="https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}" target="_blank" class="btn-secondary">Order →</a>
+                        <a href="https://wa.me/6281234567890?text=${encodeURIComponent(waMessage)}" target="_blank" class="btn-secondary">Pesan →</a>
                     </div>
                 `;
             });
             container.innerHTML = html;
         }
 
-        // Navigation
         document.addEventListener("DOMContentLoaded", () => {
             renderProducts("semua");
             
