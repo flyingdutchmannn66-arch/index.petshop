@@ -43,7 +43,7 @@
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><circle cx="13" cy="13" r="10" fill="%23C6A43B" stroke="%239E7E2C" stroke-width="2"/><polygon points="13,3 16,9 22,9 17,13 19,19 13,15 7,19 9,13 4,9 10,9" fill="%23E8D5A3" stroke="%239E7E2C" stroke-width="1"/></svg>') 13 13, auto;
         }
         
-        a, button, .cat-btn, .product-card, .btn-primary, .btn-secondary, .floating-btn, .slide-btn, .notify-btn, .copy-btn, .address-item, .cart-item-remove, .wishlist-btn {
+        a, button, .cat-btn, .product-card, .btn-primary, .btn-secondary, .slide-btn, .notify-btn, .copy-btn, .address-item, .cart-item-remove, .wishlist-btn {
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"><circle cx="15" cy="15" r="12" fill="%23E8D5A3" stroke="%23C6A43B" stroke-width="2"/><polygon points="15,4 18,11 26,11 20,16 22,24 15,19 8,24 10,16 4,11 12,11" fill="%23C6A43B" stroke="%239E7E2C" stroke-width="1"/></svg>') 15 15, pointer;
         }
 
@@ -781,29 +781,6 @@
         }
         .trust-item i { font-size: 14px; }
 
-        /* Guarantee Badge */
-        .guarantee-badge {
-            position: fixed;
-            top: 100px;
-            left: 20px;
-            background: linear-gradient(135deg, #9E7E2C, var(--gold));
-            color: #1A1A2E;
-            padding: 10px 18px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 12px;
-            z-index: 1000;
-            animation: pulse 2s infinite;
-            box-shadow: 0 0 15px rgba(198,164,59,0.5);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-        }
-
         /* Live Visitor Counter */
         .visitor-counter {
             position: fixed;
@@ -1422,43 +1399,45 @@
         }
         .contact-btn-footer:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
-        /* Floating Buttons - DIPERKECIL UKURANNYA */
-        .floating-buttons {
+        /* Floating Buttons - DIPINDAH KE ATAS (kanan atas) */
+        .floating-buttons-top {
             position: fixed;
-            right: 18px;
-            bottom: 25px;
+            top: 20px;
+            right: 20px;
             display: flex;
-            flex-direction: column;
             gap: 12px;
-            z-index: 1000;
+            z-index: 1001;
         }
-        .floating-btn {
+        .floating-btn-top {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             width: auto;
-            min-width: 130px;
-            padding: 10px 18px;
-            border-radius: 50px;
+            padding: 8px 16px;
+            border-radius: 40px;
             text-decoration: none;
             font-weight: 600;
             font-size: 13px;
             transition: var(--transition);
-            box-shadow: var(--shadow-lg);
-            animation: fadeInRight 0.6s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px);
+            background: rgba(0,0,0,0.6);
+            border: 1px solid rgba(255,255,255,0.2);
         }
-        .floating-btn.instagram {
+        .floating-btn-top.instagram {
             background: linear-gradient(135deg, #f09433, #d62976, #962fbf);
             color: white;
+            border: none;
         }
-        .floating-btn.whatsapp {
+        .floating-btn-top.whatsapp {
             background: #25D366;
             color: white;
+            border: none;
         }
-        .floating-btn:hover { transform: translateX(-6px) scale(1.02); }
-        @keyframes fadeInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        .floating-btn-top:hover { transform: scale(1.05); }
 
+        /* Scroll Top */
         .scroll-top {
             position: fixed;
             bottom: 30px;
@@ -1542,7 +1521,7 @@
         }
 
         @media print {
-            .navbar, .floating-buttons, .scroll-top, .cart-sidebar, .wishlist-sidebar, .category-buttons, .filter-bar, .slider-section, .blog-section, .hours-section, .payment-section, .location-section, .testimonials, .steps, .footer, .trust-badge, .promo-banner, .spin-modal, .theme-toggle, .cart-icon, .wishlist-icon, .leaderboard-section, .visitor-counter, .guarantee-badge, .qr-modal, .ar-modal {
+            .navbar, .floating-buttons-top, .scroll-top, .cart-sidebar, .wishlist-sidebar, .category-buttons, .filter-bar, .slider-section, .blog-section, .hours-section, .payment-section, .location-section, .testimonials, .steps, .footer, .trust-badge, .promo-banner, .spin-modal, .theme-toggle, .cart-icon, .wishlist-icon, .leaderboard-section, .visitor-counter, .qr-modal, .ar-modal {
                 display: none !important;
             }
             .invoice-container { display: block !important; padding: 20px; }
@@ -1558,7 +1537,8 @@
             .filter-group { width: 100%; justify-content: center; }
             .wheel-pointer { top: -15px; border-left: 15px solid transparent; border-right: 15px solid transparent; border-top: 30px solid var(--gold); }
             .leaderboard-rank { font-size: 20px; width: 40px; }
-            .guarantee-badge { top: auto; bottom: 80px; left: 20px; font-size: 10px; }
+            .floating-buttons-top { top: 70px; right: 12px; gap: 8px; }
+            .floating-btn-top { padding: 6px 12px; font-size: 11px; }
         }
         @media (min-width: 1920px) {
             .container { max-width: 1600px; }
@@ -1594,11 +1574,6 @@
     </div>
     
     <div class="gradient-overlay"></div>
-
-    <!-- Guarantee Badge -->
-    <div class="guarantee-badge">
-        <i class="fas fa-certificate"></i> 100% UANG KEMBALI • GARANSI 30 HARI
-    </div>
 
     <!-- Live Visitor Counter -->
     <div class="visitor-counter">
@@ -1726,7 +1701,7 @@
             <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_jcyujkcv.json" background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
         </div>
 
-        <!-- Trust Badge dengan Sertifikat -->
+        <!-- Trust Badge dengan Sertifikat (Banner 100% uang kembali sudah dihapus) -->
         <div class="trust-badge" data-aos="fade-up">
             <div class="trust-item"><i class="fas fa-star"></i> 4.9 dari 2.000+ pelanggan</div>
             <div class="trust-item"><i class="fas fa-certificate"></i> Sertifikat Halal MUI</div>
@@ -1736,7 +1711,7 @@
             <div class="trust-item"><i class="fas fa-gem"></i> 100% Produk Import Resmi</div>
         </div>
 
-        <!-- Stats dengan Animated Counters - ANGKA YANG DITANYAKAN SUDAH DIHAPUS -->
+        <!-- Stats dengan Animated Counters -->
         <div class="stats" data-aos="fade-up">
             <div class="stat-item"><div class="stat-number" id="counterHappyCats">0</div><div class="stat-label">Pelanggan Puas</div></div>
             <div class="stat-item"><div class="stat-number" id="counterRating">0</div><div class="stat-label">Review Positif</div></div>
@@ -1801,9 +1776,7 @@
         <!-- Leaderboard Pelanggan Setia -->
         <div id="leaderboardSection" class="leaderboard-section" data-aos="fade-up">
             <div class="slider-title"><span>🏆</span> Leaderboard Pelanggan Setia <span>👑</span></div>
-            <div class="leaderboard-list" id="leaderboardList">
-                <!-- Dynamic from JS -->
-            </div>
+            <div class="leaderboard-list" id="leaderboardList"></div>
             <p style="text-align: center; margin-top: 20px; font-size: 13px;">✨ Setiap pembelian = +50 poin ✨</p>
         </div>
 
@@ -1873,10 +1846,10 @@
         </div>
     </div>
 
-    <!-- Floating Buttons - DIPERKECIL -->
-    <div class="floating-buttons">
-        <a href="https://instagram.com/whiskersco" target="_blank" class="floating-btn instagram"><i class="fab fa-instagram"></i><span>IG</span></a>
-        <a href="https://wa.me/6281234567890?text=Halo%20Whiskers%26Co.%2C%20saya%20mau%20order%20produk%20kucing" target="_blank" class="floating-btn whatsapp"><i class="fab fa-whatsapp"></i><span>WA</span></a>
+    <!-- Floating Buttons - DIPINDAH KE ATAS (kanan atas) dengan ukuran kecil -->
+    <div class="floating-buttons-top">
+        <a href="https://instagram.com/whiskersco" target="_blank" class="floating-btn-top instagram"><i class="fab fa-instagram"></i><span>IG</span></a>
+        <a href="https://wa.me/6281234567890?text=Halo%20Whiskers%26Co.%2C%20saya%20mau%20order%20produk%20kucing" target="_blank" class="floating-btn-top whatsapp"><i class="fab fa-whatsapp"></i><span>WA</span></a>
     </div>
 
     <div class="scroll-top" id="scrollTop">⬆️</div>
@@ -1914,7 +1887,7 @@
             localStorage.setItem('visitorCount', visitorCount);
         }, 15000);
 
-        // ========= ANIMATED COUNTERS (target numbers disesuaikan) =========
+        // ========= ANIMATED COUNTERS =========
         function animateCounter(elementId, target, duration = 2000) {
             const element = document.getElementById(elementId);
             if (!element) return;
@@ -1960,7 +1933,7 @@
             showToast('✨ Terima kasih telah berbagi! ✨');
         }
 
-        // ========= QR CODE FOR EACH PRODUCT =========
+        // ========= QR CODE =========
         let currentQRProduct = null;
         function showQR(product) {
             currentQRProduct = product;
@@ -1995,7 +1968,7 @@
             }
         }
 
-        // ========= LEADERBOARD PELANGGAN SETIA =========
+        // ========= LEADERBOARD =========
         let loyalCustomers = JSON.parse(localStorage.getItem('whiskers_leaderboard')) || [
             { name: "👑 Sarah Wijaya", points: 2450, badge: "👑" },
             { name: "🐱 Budi Santoso", points: 1890, badge: "🥈" },
@@ -2450,7 +2423,7 @@
         if (document.getElementById('qrModal')) document.getElementById('qrModal').addEventListener('click', (e) => { if(e.target === document.getElementById('qrModal')) closeQRModal(); });
         if (document.getElementById('arModal')) document.getElementById('arModal').addEventListener('click', (e) => { if(e.target === document.getElementById('arModal')) closeARModal(); });
         
-        console.log("✅ Semua fitur premium berhasil ditambahkan: Glassmorphism, Animated Counters, Cursor Trail, Trust Badge+Sertifikat, Live Visitor, Guarantee Badge, Share Social, QR Code, AR Preview, Dark Mode Canggih, Leaderboard!");
+        console.log("✅ Semua fitur premium berhasil ditambahkan: Floating buttons dipindah ke atas, banner garansi dihapus!");
     </script>
 </body>
 </html>
