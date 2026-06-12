@@ -48,41 +48,12 @@
             max-width: 1400px;
             width: 92%;
             margin: 0 auto;
-            padding: 0 12px 80px 12px; /* padding bottom besar untuk menghindari floating button */
+            padding: 0 12px 80px 12px;
             position: relative;
             z-index: 2;
         }
 
-        /* GUARANTEE BADGE - diubah posisinya agar tidak menutupi konten */
-        .guarantee-badge {
-            position: fixed;
-            top: auto;
-            bottom: 80px;
-            left: 16px;
-            background: linear-gradient(135deg, #9E7E2C, var(--gold));
-            color: #1A1A2E;
-            padding: 6px 14px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 10px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            white-space: nowrap;
-        }
-        @media (max-width: 480px) {
-            .guarantee-badge {
-                bottom: 70px;
-                left: 12px;
-                font-size: 9px;
-                padding: 5px 10px;
-                white-space: nowrap;
-            }
-        }
-
-        /* VISITOR COUNTER - posisi aman tidak bertabrakan */
+        /* VISITOR COUNTER */
         .visitor-counter {
             position: fixed;
             bottom: 80px;
@@ -109,7 +80,7 @@
             }
         }
 
-        /* FLOATING BUTTONS - lebih kecil dan tidak mengganggu */
+        /* FLOATING BUTTONS */
         .floating-buttons {
             position: fixed;
             right: 12px;
@@ -147,12 +118,9 @@
                 padding: 8px 12px;
                 font-size: 11px;
             }
-            .floating-btn span {
-                display: inline; /* tetap tampil */
-            }
         }
 
-        /* SCROLL TOP - tidak menabrak */
+        /* SCROLL TOP */
         .scroll-top {
             position: fixed;
             bottom: 20px;
@@ -244,7 +212,7 @@
             font-size: 11px;
         }
 
-        /* Trust Badge - responsif dan tidak berantakan */
+        /* Trust Badge */
         .trust-badge {
             display: flex;
             flex-wrap: wrap;
@@ -268,7 +236,6 @@
             .trust-item {
                 font-size: 9px;
                 padding: 4px 8px;
-                white-space: nowrap;
             }
         }
 
@@ -302,7 +269,7 @@
             opacity: 0.8;
         }
 
-        /* Category buttons - scroll horizontal */
+        /* Category buttons */
         .category-buttons {
             display: flex;
             flex-wrap: nowrap;
@@ -409,7 +376,124 @@
             color: #E8E0D5;
         }
 
-        /* Footer - dengan margin bottom cukup */
+        /* Location Section */
+        .location-section {
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 40px;
+            background: rgba(26, 26, 46, 0.5);
+        }
+        .location-title {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--gold);
+        }
+        .address-card {
+            background: rgba(0,0,0,0.3);
+            border-radius: 30px;
+            padding: 18px;
+            margin-bottom: 20px;
+            text-align: center;
+            border: 1px solid var(--glass-border);
+        }
+        .address-full {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .address-detail {
+            font-size: 13px;
+            color: #CBC3B5;
+            margin-bottom: 12px;
+        }
+        .map-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .map-btn {
+            background: rgba(198,164,59,0.2);
+            padding: 8px 16px;
+            border-radius: 40px;
+            text-decoration: none;
+            color: var(--gold);
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+        .map-btn:hover {
+            background: var(--gold);
+            color: #1A1A2E;
+        }
+        .maps-container {
+            border-radius: 30px;
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            margin-bottom: 20px;
+        }
+        .maps-container iframe {
+            width: 100%;
+            height: 260px;
+            display: block;
+        }
+        .branch-list {
+            background: rgba(0,0,0,0.3);
+            border-radius: 30px;
+            padding: 18px;
+            border: 1px solid var(--glass-border);
+        }
+        .branch-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+        }
+        .branch-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 15px;
+            background: rgba(45,45,68,0.5);
+            border-radius: 50px;
+            text-decoration: none;
+            color: #E8E0D5;
+            margin-bottom: 10px;
+            transition: var(--transition);
+        }
+        .branch-item:hover {
+            background: rgba(198,164,59,0.3);
+            transform: translateX(5px);
+        }
+        .branch-icon {
+            font-size: 20px;
+        }
+        .branch-info {
+            flex: 1;
+        }
+        .branch-name {
+            font-weight: 600;
+            font-size: 14px;
+        }
+        .branch-address {
+            font-size: 11px;
+            opacity: 0.7;
+        }
+        .hours-info {
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+            font-size: 12px;
+            color: var(--gold-light);
+        }
+
+        /* Footer */
         .footer {
             background: linear-gradient(135deg, #0A0A14, #12121C);
             padding: 40px 0 30px;
@@ -433,6 +517,7 @@
             text-decoration: none;
             font-size: 13px;
             margin: 5px;
+            color: #E8E0D5;
         }
 
         /* Sidebar */
@@ -500,6 +585,7 @@
             font-size: 14px;
             display: inline-block;
             cursor: pointer;
+            border: none;
         }
         .hero-image {
             font-size: 55px;
@@ -533,25 +619,13 @@
             text-align: center;
         }
 
-        /* Slider */
-        .slider-container {
-            overflow: hidden;
-            position: relative;
-        }
-        .slider-wrapper {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-        .slide {
-            min-width: 100%;
-        }
-        .slide-content {
-            padding: 25px 15px;
-            background: rgba(198,164,59,0.1);
-            border-radius: 35px;
-        }
-
         /* Leaderboard */
+        .leaderboard-section {
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 40px;
+            background: rgba(26, 26, 46, 0.5);
+        }
         .leaderboard-item {
             display: flex;
             align-items: center;
@@ -561,65 +635,36 @@
             border-radius: 40px;
             margin-bottom: 8px;
         }
+        .section-title {
+            margin: 40px 0 20px;
+            font-size: 24px;
+            text-align: center;
+        }
 
         /* Light mode */
         body.light-mode .navbar,
         body.light-mode .category-buttons,
         body.light-mode .product-card,
         body.light-mode .stats,
-        body.light-mode .filter-group {
+        body.light-mode .filter-group,
+        body.light-mode .location-section,
+        body.light-mode .leaderboard-section {
             background: rgba(255, 248, 240, 0.9);
             color: #2D2D2D;
         }
         body.light-mode .footer {
             background: #F5EDE0;
         }
-
-        /* Spacing bottom agar tidak tertutup floating buttons */
-        .section-title {
-            margin: 40px 0 20px;
-            font-size: 24px;
-            text-align: center;
+        body.light-mode .address-card,
+        body.light-mode .branch-list {
+            background: rgba(0,0,0,0.05);
         }
-        .hours-section, .payment-section, .location-section, .blog-section, .leaderboard-section {
-            margin: 30px 0;
-            padding: 25px;
-            border-radius: 40px;
-            background: rgba(26, 26, 46, 0.5);
-        }
-        .location-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .maps-container iframe {
-            width: 100%;
-            height: 220px;
-            border-radius: 25px;
-        }
-        .testimonials, .steps {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin: 30px 0;
-        }
-        @media (min-width: 640px) {
-            .testimonials, .steps {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        .testi-card, .step {
-            background: rgba(26, 26, 46, 0.5);
-            padding: 20px;
-            border-radius: 35px;
-            text-align: center;
+        body.light-mode .branch-item {
+            background: rgba(0,0,0,0.08);
         }
     </style>
 </head>
 <body>
-    <div class="guarantee-badge">
-        <i class="fas fa-certificate"></i> 100% UANG KEMBALI • GARANSI 30 HARI
-    </div>
     <div class="visitor-counter">
         <i class="fas fa-eye"></i> <span id="visitorCount">0</span> online
     </div>
@@ -646,7 +691,7 @@
         <div class="wishlist-items" id="wishlistItems" style="flex:1; overflow-y:auto;"></div>
     </div>
 
-    <!-- QR, AR, Spin Modal sederhana -->
+    <!-- QR, AR, Spin Modal -->
     <div id="qrModal" class="qr-modal"><div class="qr-content"><h3>QR Code</h3><div id="qrcode"></div><p id="qrProductName"></p><button class="btn-secondary" onclick="closeQRModal()">Tutup</button></div></div>
     <div id="arModal" class="ar-modal"><div class="ar-container"><h2>AR Preview</h2><div id="arPreview" style="font-size:60px;">🐱</div><button class="btn-primary" onclick="startAR()">Mulai AR</button><button class="btn-secondary" onclick="closeARModal()">Tutup</button></div></div>
     <div id="spinModal" class="spin-modal"><div class="spin-container"><h2>🎡 SPIN TO WIN!</h2><div id="wheel" style="width:200px;height:200px;background:conic-gradient(#E8D5A3 0deg 60deg,#C6A43B 60deg 120deg); border-radius:50%; margin:15px auto;"></div><button id="spinBtn" class="btn-primary">SPIN</button><button class="btn-secondary" onclick="closeSpinModal()">Tutup</button></div></div>
@@ -659,6 +704,7 @@
                 <a href="#" id="berandaBtn">Beranda</a>
                 <a href="#" id="spinBtnNav">🎡 Spin</a>
                 <a href="#" id="produkBtn">Produk</a>
+                <a href="#" id="locationBtn">📍 Lokasi</a>
                 <div class="cart-icon" onclick="toggleCart()"><i class="fas fa-shopping-cart"></i><span class="cart-count" id="cartCount">0</span></div>
                 <div class="wishlist-icon" onclick="toggleWishlist()"><i class="fas fa-heart"></i><span class="wishlist-count" id="wishlistCount">0</span></div>
                 <div class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i></div>
@@ -676,7 +722,7 @@
             <div class="hero-image">🐈 👑 🐈‍⬛</div>
         </div>
 
-        <!-- Trust Badge - tidak berantakan -->
+        <!-- Trust Badge -->
         <div class="trust-badge">
             <div class="trust-item"><i class="fas fa-star"></i> 4.9★</div>
             <div class="trust-item"><i class="fas fa-certificate"></i> Halal MUI</div>
@@ -718,7 +764,77 @@
             <div class="leaderboard-list" id="leaderboardList"></div>
         </div>
 
-        <!-- Footer dengan margin cukup -->
+        <!-- Location Section (Google Maps + Alamat Lengkap) -->
+        <div class="location-section" id="locationSection">
+            <div class="location-title">
+                <span>📍</span> Our Boutique <span>🗺️</span>
+            </div>
+            
+            <!-- Alamat Lengkap -->
+            <div class="address-card">
+                <div style="font-size: 14px; color: var(--gold-light); margin-bottom: 8px;">
+                    <i class="fas fa-map-pin"></i> Alamat Toko Utama
+                </div>
+                <div class="address-full">
+                    Jl. Luku I No.54, Kwala Bekala
+                </div>
+                <div class="address-detail">
+                    Kec. Medan Johor, Kota Medan, Sumatera Utara 20146
+                </div>
+                <div class="map-buttons">
+                    <a href="https://maps.google.com/?q=Jl.+Luku+I+No.54+Kwala+Bekala+Medan+20146" target="_blank" class="map-btn">
+                        <i class="fab fa-google"></i> Google Maps
+                    </a>
+                    <a href="https://waze.com/ul?q=Jl.+Luku+I+No.54+Medan&navigate=yes" target="_blank" class="map-btn">
+                        <i class="fab fa-waze"></i> Waze
+                    </a>
+                    <a href="https://maps.apple.com/?q=Jl.+Luku+I+No.54+Medan" target="_blank" class="map-btn">
+                        <i class="fab fa-apple"></i> Apple Maps
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Google Maps Iframe -->
+            <div class="maps-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3981.8296508152825!2d98.6540173!3d3.539512!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30312555977bb8ef%3A0x3daaf82dd598be5e!2sJl.%20Luku%20I%20No.54%2C%20Kwala%20Bekala%2C%20Kec.%20Medan%20Johor%2C%20Kota%20Medan%2C%20Sumatera%20Utara%2020146!5e0!3m2!1sid!2sid!4v1710000000000!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="280" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            
+            <!-- Cabang / Alamat Lainnya -->
+            <div class="branch-list">
+                <div class="branch-title">
+                    <i class="fas fa-store"></i> Alamat Lainnya
+                </div>
+                <a href="https://maps.google.com/?q=Jl.+Melati+1+Medan+Johor" target="_blank" class="branch-item">
+                    <div class="branch-icon">🌼</div>
+                    <div class="branch-info">
+                        <div class="branch-name">Cabang Melati 1</div>
+                        <div class="branch-address">Jl. Melati 1, Medan Johor</div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size: 12px; opacity: 0.6;"></i>
+                </a>
+                <a href="https://maps.google.com/?q=Jl.+Melati+2+Medan+Johor" target="_blank" class="branch-item">
+                    <div class="branch-icon">🌼</div>
+                    <div class="branch-info">
+                        <div class="branch-name">Cabang Melati 2</div>
+                        <div class="branch-address">Jl. Melati 2, Medan Johor</div>
+                    </div>
+                    <i class="fas fa-external-link-alt" style="font-size: 12px; opacity: 0.6;"></i>
+                </a>
+                <div class="hours-info">
+                    <i class="fas fa-clock"></i> Jam Operasional: 09:00 - 20:00 (Senin-Jumat) | 10:00 - 18:00 (Sabtu-Minggu)
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
         <div class="footer">
             <div class="footer-inner">
                 <div class="logo" style="font-size:20px;">🐱 WHISKERS & CO.</div>
@@ -728,11 +844,12 @@
                     <a href="https://wa.me/6281234567890" target="_blank" class="contact-btn-footer"><i class="fab fa-whatsapp"></i> WhatsApp</a>
                 </div>
                 <p style="font-size:11px;">Jl. Luku I No.54, Kwala Bekala, Medan Johor</p>
+                <p style="font-size:10px; opacity:0.6;">© 2026 Whiskers & Co. - Premium Cat Shop Medan</p>
             </div>
         </div>
     </div>
 
-    <!-- Floating buttons - lebih kecil dan tidak menutupi teks -->
+    <!-- Floating buttons -->
     <div class="floating-buttons">
         <a href="https://instagram.com/whiskersco" target="_blank" class="floating-btn instagram"><i class="fab fa-instagram"></i><span>IG</span></a>
         <a href="https://wa.me/6281234567890" target="_blank" class="floating-btn whatsapp"><i class="fab fa-whatsapp"></i><span>WA</span></a>
@@ -740,12 +857,13 @@
     <div class="scroll-top" id="scrollTop">⬆️</div>
 
     <script>
-        // Core data dan fungsi minimal agar berjalan
+        // Core data dan fungsi
         let cart = JSON.parse(localStorage.getItem('whiskers_cart')) || [];
         let wishlist = JSON.parse(localStorage.getItem('whiskers_wishlist')) || [];
         let loyalCustomers = JSON.parse(localStorage.getItem('whiskers_leaderboard')) || [
             { name: "👑 Sarah Wijaya", points: 2450, badge: "👑" },
-            { name: "🐱 Budi Santoso", points: 1890, badge: "🥈" }
+            { name: "🐱 Budi Santoso", points: 1890, badge: "🥈" },
+            { name: "⭐ Melissa Ang", points: 1520, badge: "🥉" }
         ];
 
         const productsData = [
@@ -753,7 +871,9 @@
             { id:2, nama:"Tuna Delight", harga:125000, img:"🐟✨", kategori:"makanan", usia:"all" },
             { id:3, nama:"MultiVit Cat", harga:85000, img:"💊✨", kategori:"vitamin", usia:"all" },
             { id:4, nama:"Luxury Collar Gold", harga:65000, img:"🎀🐱", kategori:"aksesoris", usia:"all" },
-            { id:5, nama:"Organic Catnip", harga:59000, img:"🧶🌿", kategori:"mainan", usia:"all" }
+            { id:5, nama:"Organic Catnip", harga:59000, img:"🧶🌿", kategori:"mainan", usia:"all" },
+            { id:6, nama:"Chicken Pate Royal", harga:110000, img:"🍗🐔", kategori:"makanan", usia:"kitten" },
+            { id:7, nama:"Omega 3 Salmon Oil", harga:120000, img:"🐟💧", kategori:"vitamin", usia:"senior" }
         ];
 
         function renderProducts(cat = "semua") {
@@ -856,30 +976,34 @@
         function triggerCheckout() { toggleCart(); }
         function checkout() {
             if (!cart.length) return showToast('Keranjang kosong');
-            let msg = 'Halo, saya mau order:%0A';
+            let msg = 'Halo Whiskers & Co., saya mau order:%0A';
             cart.forEach(i => msg += `📦 ${i.nama} x${i.quantity} = Rp ${(i.harga*i.quantity).toLocaleString()}%0A`);
-            msg += `%0ATOTAL: Rp ${cart.reduce((s,i)=>s+i.harga*i.quantity,0).toLocaleString()}`;
+            msg += `%0ATOTAL: Rp ${cart.reduce((s,i)=>s+i.harga*i.quantity,0).toLocaleString()}%0A%0AAlamat: %0ANo. WhatsApp: `;
             window.open(`https://wa.me/6281234567890?text=${msg}`, '_blank');
             canvasConfetti({ particleCount: 150 });
         }
-        function printInvoice() { if(!cart.length)return; const w=window.open('','_blank'); w.document.write(`<div><h1>Whiskers & Co.</h1>${cart.map(i=>`<p>${i.nama} x${i.quantity} = Rp ${(i.harga*i.quantity).toLocaleString()}</p>`).join('')}<p>Total: Rp ${cart.reduce((s,i)=>s+i.harga*i.quantity,0).toLocaleString()}</p></div>`); w.print(); }
+        function printInvoice() { if(!cart.length)return; const w=window.open('','_blank'); w.document.write(`<div style="padding:20px"><h1>🐱 WHISKERS & CO.</h1><p>Jl. Luku I No.54, Medan</p><hr>${cart.map(i=>`<p>${i.nama} x${i.quantity} = Rp ${(i.harga*i.quantity).toLocaleString()}</p>`).join('')}<hr><h3>Total: Rp ${cart.reduce((s,i)=>s+i.harga*i.quantity,0).toLocaleString()}</h3><p>Terima kasih!</p></div>`); w.print(); }
         function showToast(msg) { let t=document.createElement('div'); t.className='toast-notification'; t.innerText=msg; document.body.appendChild(t); setTimeout(()=>t.remove(),2500); }
         function showQR(prod) { document.getElementById('qrProductName').innerText=prod.nama; document.getElementById('qrcode').innerHTML=''; new QRCode(document.getElementById('qrcode'),{text:`https://whiskersco.com/product/${prod.id}`,width:160,height:160}); document.getElementById('qrModal').classList.add('active'); }
         function closeQRModal() { document.getElementById('qrModal').classList.remove('active'); }
         function showAR(prod) { document.getElementById('arPreview').innerHTML=prod.img; document.getElementById('arModal').classList.add('active'); }
         function closeARModal() { document.getElementById('arModal').classList.remove('active'); }
-        function startAR() { showToast('AR preview (simulasi)'); }
-        function updateLeaderboardUI() { let list=document.getElementById('leaderboardList'); if(list) list.innerHTML=loyalCustomers.sort((a,b)=>b.points-a.points).map((c,i)=>`<div class="leaderboard-item"><div>${i===0?'🥇':i===1?'🥈':'🥉'}</div><div><strong>${c.name}</strong><br>✨ ${c.points} poin</div></div>`).join(''); }
+        function startAR() { showToast('AR preview (simulasi) - Putar HP untuk pengalaman terbaik'); canvasConfetti({particleCount:80}); }
+        function updateLeaderboardUI() { let list=document.getElementById('leaderboardList'); if(list) list.innerHTML=loyalCustomers.sort((a,b)=>b.points-a.points).map((c,i)=>`<div class="leaderboard-item"><div>${i===0?'🥇':i===1?'🥈':i===2?'🥉':`#${i+1}`}</div><div><strong>${c.name}</strong><br>✨ ${c.points} poin</div></div>`).join(''); }
         
         let hasSpun = localStorage.getItem('whiskers_spun') === 'true';
-        document.getElementById('spinBtn').onclick = () => { if(hasSpun){ showToast('Sudah spin!'); return; } hasSpun=true; localStorage.setItem('whiskers_spun','true'); showToast('🎉 Diskon 10%!'); canvasConfetti({particleCount:200}); closeSpinModal(); };
+        if(document.getElementById('spinBtn')) {
+            document.getElementById('spinBtn').onclick = () => { if(hasSpun){ showToast('Sudah spin!'); return; } hasSpun=true; localStorage.setItem('whiskers_spun','true'); showToast('🎉 Selamat! Anda mendapat diskon 10%! 🎉'); canvasConfetti({particleCount:200}); closeSpinModal(); };
+        }
         function closeSpinModal() { document.getElementById('spinModal').classList.remove('active'); }
-        document.getElementById('spinBtnNav').onclick = (e) => { e.preventDefault(); document.getElementById('spinModal').classList.add('active'); };
+        if(document.getElementById('spinBtnNav')) {
+            document.getElementById('spinBtnNav').onclick = (e) => { e.preventDefault(); document.getElementById('spinModal').classList.add('active'); };
+        }
 
         // Theme
         function initTheme() { if(localStorage.getItem('theme')==='light') document.body.classList.add('light-mode'); }
         function toggleTheme() { document.body.classList.toggle('light-mode'); localStorage.setItem('theme',document.body.classList.contains('light-mode')?'light':'dark'); }
-        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+        if(document.getElementById('themeToggle')) document.getElementById('themeToggle').addEventListener('click', toggleTheme);
         initTheme();
 
         // Event listeners
@@ -887,6 +1011,7 @@
         document.getElementById("ageFilter")?.addEventListener("change", () => renderProducts(document.querySelector(".cat-btn.active").getAttribute("data-cat")));
         document.getElementById("berandaBtn")?.addEventListener("click", e => { e.preventDefault(); window.scrollTo({top:0,behavior:"smooth"}); });
         document.getElementById("produkBtn")?.addEventListener("click", e => { e.preventDefault(); document.getElementById("products-section").scrollIntoView({behavior:"smooth"}); });
+        document.getElementById("locationBtn")?.addEventListener("click", e => { e.preventDefault(); document.getElementById("locationSection").scrollIntoView({behavior:"smooth"}); });
         document.getElementById("scrollTop")?.addEventListener("click", () => window.scrollTo({top:0,behavior:"smooth"}));
 
         renderProducts("semua"); updateCartUI(); updateWishlistUI(); updateLeaderboardUI();
@@ -902,7 +1027,7 @@
         document.querySelector('.stats') && obs.observe(document.querySelector('.stats'));
 
         // Typing effect
-        const phrases = ["✨ Makanan bintang 5 • Vitamin premium ✨", "🐱 Untuk Anabul Kesayangan Anda", "🚚 Free Ongkir Area Medan"];
+        const phrases = ["✨ Makanan bintang 5 • Vitamin premium ✨", "🐱 Untuk Anabul Kesayangan Anda", "🚚 Free Ongkir Area Medan", "🎁 Gift Wrapping Cantik"];
         let pi=0, ci=0, del=false; const typed=document.getElementById('typedText');
         function typeEffect(){ if(!typed)return; let cur=phrases[pi]; if(del){ typed.innerText=cur.substring(0,ci-1); ci--; }else{ typed.innerText=cur.substring(0,ci+1); ci++; } if(!del && ci===cur.length){ del=true; setTimeout(typeEffect,2000); return; } if(del && ci===0){ del=false; pi=(pi+1)%phrases.length; setTimeout(typeEffect,400); return; } setTimeout(typeEffect,del?40:80); }
         typeEffect();
